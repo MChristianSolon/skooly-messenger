@@ -12,7 +12,7 @@ function Activity() {
         {activity.title}
       </Typography>
       <img src={activity.url} alt="activityImg" />
-      <p>{activity.content}</p>
+      <p>{activity.content} HHAHA</p>
       <TransferList />
     </div>
   );
