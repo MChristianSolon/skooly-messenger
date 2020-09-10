@@ -1,0 +1,9 @@
+.MessageField {
+  position: absolute;
+  bottom: 0vh;
+  width: 80%;
+  left: 50px;
+}
+.MediaCard {
+  margin: auto;
+}

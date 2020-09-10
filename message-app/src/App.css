@@ -1,0 +1,31 @@
+body,
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0px;
+}
+
+.ContactsRow {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.LogRow {
+  overflow-y: scroll;
+  height: 80vh;
+  width: 33.33vw;
+}
+
+.CardRow {
+  height: 100vh;
+}
+
+.SingleContactCard {
+  width: 100%;
+}
+
+.chat-cardContent {
+  width: fit-content;
+}
