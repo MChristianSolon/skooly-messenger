@@ -3,6 +3,7 @@ import './App.css';
 import { auth, uiConfig } from './components/Firebase';
 import ChatApp from './components/ChatApp';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import sigmaLogo from './components/sigmaLogo.png';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -23,7 +24,17 @@ function App() {
         ) : (
           <>
             <h1 style={{ textAlign: 'center', margin: '35vh' }}>
-              MessyMessenger
+              <img
+                src={sigmaLogo}
+                alt="sigmaLogo"
+                style={{
+                  height: '20vh',
+                  width: '25vh',
+                  position: 'absolute',
+                  top: '40px',
+                  left: '77vh',
+                }}
+              />
             </h1>
             <StyledFirebaseAuth
               class="login-authentication"

@@ -15,6 +15,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import AddIcon from '@material-ui/icons/Add';
 import CreateModule from './CreateModule';
+import { auth } from './Firebase';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -101,6 +102,13 @@ export default function Demo() {
     handleMobileMenuClose();
   };
 
+  const handleMenuLogOut = () => {
+    setAnchorEl(null);
+    handleMobileMenuClose();
+    auth.signOut();
+    window.location.reload(false);
+  };
+
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
@@ -116,10 +124,10 @@ export default function Demo() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Add Module</MenuItem>
       <MenuItem onClick={handleMenuClose}>
         <CreateModule />
       </MenuItem>
+      <MenuItem onClick={handleMenuLogOut}>Log-Oout</MenuItem>
     </Menu>
   );
 
@@ -177,7 +185,7 @@ export default function Demo() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            MessyMessenger
+            Sigma
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
