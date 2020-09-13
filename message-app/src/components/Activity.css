@@ -5,3 +5,8 @@ img {
 .activity-title {
   text-align: center;
 }
+
+.activity-row {
+  height: 100vh;
+  overflow: scroll;
+}

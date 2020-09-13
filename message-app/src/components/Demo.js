@@ -105,8 +105,7 @@ export default function Demo() {
   const handleMenuLogOut = () => {
     setAnchorEl(null);
     handleMobileMenuClose();
-    auth.signOut();
-    window.location.reload(false);
+    auth.signOut().then(() => window.location.reload(false));
   };
 
   const handleMobileMenuOpen = (event) => {
@@ -127,7 +126,7 @@ export default function Demo() {
       <MenuItem onClick={handleMenuClose}>
         <CreateModule />
       </MenuItem>
-      <MenuItem onClick={handleMenuLogOut}>Log-Oout</MenuItem>
+      <MenuItem onClick={handleMenuLogOut}>Log-Out</MenuItem>
     </Menu>
   );
 

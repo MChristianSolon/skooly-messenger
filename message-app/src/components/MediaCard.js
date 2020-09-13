@@ -10,7 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import { ImgUrlContext } from './ImgUrlContext';
 import { LogContext } from './LogContext';
 import { ActivityContext } from './ActivityContext';
-import Activity from './Activity';
 
 const useStyles = makeStyles({
   root: {
@@ -25,8 +24,8 @@ export default function MediaCard() {
   const classes = useStyles();
   const { imgUrl } = useContext(ImgUrlContext);
   const { log } = useContext(LogContext);
-  const { setActivity } = useContext(ActivityContext);
-
+  const { activity, setActivity } = useContext(ActivityContext);
+  console.log(activity);
   function handleActivate() {
     setActivity({
       title: log.split(':')[1],
